@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+<nav class="navbar">
+    <ul>
+        <li style="--i:1;"><a href="#home">home</a></li>
+        <li style="--i:2;"><a href="#feature">feature</a></li>
+        <li style="--i:3;"><a href="#about">about</a></li>
+        <li style="--i:4;"><a href="#gallery">gallery</a></li>
+        <li style="--i:6;"><a href="#contact">contact</a></li>
+    </ul>
+</nav>
+
+<div class="menu"><i class="fas fa-bars"></i></div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+<div class="video-container">
+    <video id="myvideo" width="100%" height="auto" muted="" controls style="background:black">
+        <source class="active" src="videos/sample.mp4.mp4" type="video/mp4" />
+        <source src="videos/maldives.mp4" type="video/mp4" />
+        <source src="videos/hawaii.mp4" type="video/mp4" />
+
+      </video>
+</div>
+<script>
+   var myvid = document.getElementById('myvideo');
+
+myvid.addEventListener('ended', function(e) {
+  var activesource = document.querySelector("#myvideo source.active");
+  var nextsource = document.querySelector("#myvideo source.active + source") || document.querySelector("#myvideo source:first-child");
+  activesource.className = "";
+  nextsource.className = "active";
+  myvid.src = nextsource.src;
+  myvid.play();
+});
+</script>
+
+<div class="content">
+
+    <h1>Travel</h1>
+    <h3>its time to Explore!</h3>
+
+    <div class="form-container">
+
+        <form action="">
+
+            <h3>search your destination</h3>
+
+            <span>location</span>
+            <input type="text" placeholder="place you want to visit" required>
+
+            <span>guest members</span>
+            <input type="number" placeholder="how many people" required>
+
+            <span>arrivals</span>
+            <input type="date">
+
+            <span>leaving</span>
+            <input type="date">
+
+            <input class="btn" type="submit" value="search">
+
+        </form>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- feature section starts  -->
+
+<section class="feature" id="feature">
+
+<h1 class="heading">popular places</h1>
+<h3 class="title">see the most featured places</h3>
+
+<div class="card-container">
+
+    <div class="card">
+        <img src="images/egypt.jpg" alt="">
+        <div class="info">
+            <h3>Egypt </h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p> Pyramids if Giza are at the top of most travel itineraries and for good reason they remain both awesome to see and fascinating to visit. .</p>
+            <a href="#"><button class="btn">visit now!</button></a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/bali.jpg" alt="">
+        <div class="info">
+            <h3>Bali </h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, minima!</p>
+            <a href="#"><button class="btn">visit now!</button></a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/greece.jpg" alt="">
+        <div class="info">
+            <h3>Greece </h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half"></i>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, minima!</p>
+            <a href="#"><button class="btn">visit now!</button></a>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- feature section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+<h1 class="heading">about us</h1>
+<h3 class="title">explore the world with us</h3>
+
+<div class="row">
+
+    <div class="image">
+        <img src="images/why.jpg"">
+    </div>
+
+    <div class="content">
+        <h3>why choose us?</h3>
+        <p>we are committed to providing a professional service to our customers, ensuring they benefit from our experience, unique style and  energy. A highly visible, independent and progressive travel agency, we aim to make a difference in everything we do.</p>
+        <a href="#"><button class="btn">read more</button></a>
+    </div>
+
+</div>
+
+<div class="box-container">
+
+    <div class="box">
+        <i class="fas fa-map"></i>
+        <h3>travel guide</h3>
+    </div>
+
+    <div class="box">
+        <i class="fas fa-users"></i>
+        <h3>24 x 7 service</h3>
+    </div>
+
+    <div class="box">
+        <i class="fas fa-hotel"></i>
+        <h3>hotel booking</h3>
+    </div>
+
+</div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- gallery section starts  -->
+
+<section class="gallery" id="gallery">
+
+<h1 class="heading">our gallery</h1>
+<h3 class="title">explore the most visited places</h3>
+
+<div class="box-container">
+
+    <div class="box">
+        <div class="image">
+            <img src="images/jaipur.jpg" alt="">
+        </div>
+        <div class="content">
+            <h3>Jaipur </h3>
+            <p>Jaipur is also known as the Pink City, due to the dominant color scheme of its buildings. It is located 268 km (167 miles) from the national capital New Delhi.</p>
+            <a href="#"><button class="btn">explore!</button></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="image">
+            <img src="images/pokhara.jpg" alt="">
+        </div>
+        <div class="content">
+            <h3>Pokhara </h3>
+            <p>One of the most beautiful yet low budget natural destination in our neighbouring country Nepal. Famous for mountain villages and lakes.</p>
+            <a href="#"><button class="btn">explore!</button></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="image">
+            <img src="images/everest-base-camp.jpg" alt="">
+        </div>
+        <div class="content">
+            <h3>The Himalayas </h3>
+            <p>Mystery, beauty and tradition are ingrained into the great lands of the Himalaya. While the ancient monasteries of Tibet emit a calming peace, Kathmandu hums with the life of its people. Meanwhile, the behemoth of Mount Everest stands guard over an immense natural landscape of forests, gorges and peaks. </p>
+            <a href="#"><button class="btn">explore!</button></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="image">
+            <img src="images/maldives.jpg.crdownload" alt="">
+        </div>
+        <div class="content">
+            <h3>Maldives </h3>
+            <p>The Maldives is 99% water and just one percent land. And as one might expect, the thrills of the Maldives lie on, under or over the surface of the water. Wherever you choose to holiday in the Maldives, there is watersports on offer. </p>
+            <a href="#"><button class="btn">explore!</button></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="image">
+            <img src="images/morocco.jpg" alt="">
+        </div>
+        <div class="content">
+            <h3>Morocco </h3>
+            <p>Morocco is a gateway to Africa and a country of dizzying diversity. Here you'll find epic mountain ranges, ancient cities, sweeping deserts – and warm hospitality.</p>
+            <a href="#"><button class="btn">explore!</button></a>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<!-- gallery section ends -->
+
+<!-- newsletter section stars  -->
+
+<section class="newsletter">
+
+<div class="box">
+    <h1>sign up for discount</h1>
+    <p>get in touch with us and get latest updates</p>
+
+    <form action="">
+        <input type="email" placeholder="enter your email">
+        <input type="submit" class="btn" value="send">
+    </form>
+</div>
+
+</section>
+
+<!-- newsletter section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+<h1 class="heading">contact us</h1>
+<h3 class="title">book your tickets now</h3>
+
+<form action="">
+
+<div class="inputBox">
+    <input type="text" placeholder="first name" required>
+    <input type="text" placeholder="last name" required>
+</div>
+
+<div class="inputBox">
+    <input type="email" placeholder="email" required>
+    <input type="number" placeholder="phone" required>
+</div>
+
+
+<textarea name="" id="" cols="30" rows="10" placeholder="message"></textarea>
+
+<input type="submit" value="message" class="btn">
+
+
+</form>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+<div class="box">
+    <h3>explore</h3>
+    <p>Because you can not find peace trapped inside your home. Explore the most natural places on earth where barely anyone goes and find yourself.</p>
+</div>
+
+<div class="box">
+    <h3>share</h3>
+    <a href="https://www.facebook.com/">facebook</a>
+    <a href="https://twitter.com/">twitter</a>
+    <a href="https://instagram.com/">instagram</a>
+    <a href="https://github.com/">github</a>
+</div>
+
+<div class="box">
+    <h3>links</h3>
+    <a href="#">home</a>
+    <a href="#">feature</a>
+    <a href="#">about</a>
+    <a href="#">gallery</a>
+    <a href="#">review</a>
+    <a href="#">contact</a>
+</div>
+
+
+</section>
+
+
+<!-- footer section ends -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="index.js"></script>
+
+</body>
+</html>
